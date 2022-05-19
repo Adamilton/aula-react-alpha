@@ -1,208 +1,90 @@
-@import url('https://fonts.googleapis.com/css2?family=Jockey+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,600;1,200&display=swap');
 
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background: #e7e7e7;
+  background: #a6a6e3;
+  font-family: 'Raleway', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
+.container {
+  margin: 100px auto;
+  width: 400px;
+  height: auto;
+  background: #ffffff;
 
-header {
-  position: absolute;
-
-  width: 100%;
-  height: 63px;
-  left: 0px;
-  top: 0px;
-
-  background: #0acd86;
+  border-radius: 10px;
 
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: flex-start;
+  justify-content: center;
+
+  overflow: hidden;
+  box-shadow: 2px 5px 4px 0px rgb(69 53 104 / 20%);
 
 }
 
-.logo {
-  width: 120px;
-  height: 100%;
-
-  background: #0aab6b;
-}
-
-.menu {
+input, button {
+  all: unset;
   width: 100%;
-  padding-left: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap:20px;
-
-  font-family: 'Jockey One', sans-serif;
-}
-button {
-  width: 140px;
   height: 40px;
+  box-shadow: inset 2px 2px 4px 0px rgb(69 53 104 / 20%);
+
+  border-bottom: 2px solid #c3b7de;
+}
+
+input {
+  padding: 0 10px;
+}
+
+input::placeholder {
+  position: relative;
+  left: 20px;
+}
+
+button {
+  background: #442d6b;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: bold;
 
   border: none;
-  border-radius: 34px;
-  background: #0ACD86;
-
-  font-family: "Jockey One";
-  font-size: 20px;
   text-align: center;
-  color: #0AAB6B;
-
-  cursor: pointer;
-  transition: 0.4s;
-  
-}
-
-button:hover, .selected{
-  background: #FFFFFF;
-}
-
-.user-profile {
-  width: 120px;
-  display: flex;
-  align-items: center;
-}
-
-.user-profile img {
-  width: 50px;
   cursor: pointer;
 }
 
-main {
-  width: calc(100vw - 320px);
-  height: 100%;
-  left: 117px;
-
-  background: #F2F2F2;
-  margin: 0 auto;
-  margin-top: 54px;
-
-  padding: 40px;
+.task {
+  width: 400px;
+  padding: 0 10px;
+  height: 40px;
+  border-bottom: 1px solid #ddd;
   display: flex;
-  flex-wrap: wrap;justify-content: space-between;
-  gap: 30px;
-
-}
-
-.forms {
-  width: calc(100vw - 240px);
-  height: 212px;
-  left: 117px;
-
-  background: #F2F2F2;
-  margin: 0 auto;
-  margin-top: 104px;
-}
-
-.forms {
-  display: flex;
-  justify-content:center;
+  justify-items: center;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 100px;
+
 }
 
-.forms input {
-  height: 41px;
-  background: #FFFFFF;
-  border-radius: 17px;
-
-  border: 0px;
+.task label {
+  padding: 10px;
 }
 
-.forms .inputs {
-  width: 715px;
+
+.icon {
+  width: 60px;
   display: flex;
   flex-wrap: wrap;
-  justify-content:space-between;
-  align-items: center;
-  gap: 20px;
+  gap: 10px;
+}
+.trash  {
+  color: #f8a02c;
+  cursor: pointer;
 }
 
-.forms .buttons {
-  width: 300px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content:space-between;
-  align-items: center;
-  gap: 20px;
-}
-.description {
-  width: 714px;
-}
-
-.date, .local {
-  width: 340px;
-}
-
-.buttons button {
-  width: 282px;
-  height: 41px;
-  left: 983px;
-  top: 149px;
-
-  border-radius: 17px;
-  color: white;
-}
-
-.clear {
-  background:#E1B84F;
-
-}
-
-.card {
-  width: 327px;
-  height: 183px;
-
-  background: #FFFFFF;
-  border-radius: 18px;
-
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.card h1{
-  width:100%;
-  text-align: center;
-
-  font-family: 'Jockey One';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 39px;
-  height: 10px;
-
-  color: #D2D2D2;
-}
-
-.card h3 {
-  width:100%;
-  height: 10px;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 26px;
-  text-align: center;
-
-  color: #D2D2D2;
-}
-
-.card span {
-font-style: normal;
-font-weight: 600;
-font-size: 26px;
-line-height: 44px;
-
-color: #0ACD86;
+.edit {
+  color: #89798b;
+    cursor: pointer;
 
 }

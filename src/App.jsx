@@ -1,17 +1,9 @@
-import React from "react";
-import './index.css';
+import ReactDOM from "react-dom";
 
-import Header from "./components/Header";
-import Main from "./components/Main";
+import TodoList from "./components/TodoList";
 
 function App() {
-
-  return (
-    <>
-      <Header />
-      <Main />
-    </>
-  );
+  return <TodoList />;
 }
 
 export default App;
