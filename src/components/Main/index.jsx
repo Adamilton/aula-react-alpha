@@ -1,16 +1,47 @@
-import React, {useContext} from "react";
+import React, {useState} from "react";
 
 import Card from '../Card';
 import Forms from "../Forms"
 
-import { TaskContext } from "../../context/TaskContext";
 import { Container } from "./style.js"
 
 function Main() {
-  const {cards} = useContext(TaskContext);
+  const [description, setDescription] = useState("");
+  const [date, setDate] = useState("");
+  const [local, setLocal] = useState("");
+
+  const [cards, setCards] = useState([])
+
+  function handleData(event){
+    const newCard = {
+      description: description,
+      date: date,
+      local: local
+    }
+
+    let allCards = cards;
+    allCards.push(newCard);
+    setCards(allCards)
+
+    console.log(cards)
+
+    clearInput()
+    }
+
+    function clearInput(){
+      setDescription("")
+      setDate("")
+      setLocal("")
+    }
 
   return <>
-    <Forms />
+    <Forms  setDescription={setDescription} 
+      description={description} 
+      date={date} local={local} 
+      setDate={setDate} 
+      setLocal={setLocal} 
+      handleData={handleData} 
+      clearInput={clearInput}/>
       
     <Container>
       {
